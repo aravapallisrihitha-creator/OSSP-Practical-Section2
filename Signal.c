@@ -1,32 +1,22 @@
-#include<stdio.h>
 #include<signal.h>
 #include<unistd.h>
 
 void handler(int sig)
 {
-     printf("\nSIGINT recived!\n");
-     printf("Signal number = %d\n", sig);
+      printf("\nSIGINT recived:\n");
+      printf("Signal number = %d\n", sig);
 }
 
 int main()
 {
-      signal(SIGINT, handler);
+     signal(SIGINT, handler);
 
-      while(1)
-      {
-            printf("Program is running...\n");
-            sleep(2);
-      }
+    while(1)
+    {
+        printf("Program is running...\n");
+        sleep(2);
+    }
 
      return 0;
 
 }
-
-
-
-
-
-
-
-
-
